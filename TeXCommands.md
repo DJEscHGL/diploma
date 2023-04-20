@@ -15,7 +15,7 @@
 | \huge         | 20.74 | 20.74 | 24.88 |
 | \Huge         | 24.88 | 24.88 | 24.88 |
 
-### Главы без нумерации
+### Глава без нумерации и без счётчика
 
 ```tex
 \anonsection
@@ -23,4 +23,28 @@
 \newcommand{\anonsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
 ```
 
-![](Files/Assets/Screenshots/CC1.png)
+### Глава без нумерацией но со счётчиком
+
+```tex
+\numsection
+
+\newcommand{\numsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1} \refstepcounter{section}}
+```
+
+### Изменение заголовка автоматического оглавления
+
+```tex
+\renewcommand{\contentsname}{Оглавление}
+```
+
+### Нумерация изображений внутри глав
+
+```tex
+\counterwithin{figure}{section}
+```
+
+### Добавление пункта в оглавление
+
+```tex
+\addcontentsline{toc}{section}{Список использованных источников}
+```
