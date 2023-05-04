@@ -9,9 +9,11 @@
 \usepackage{indentfirst}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{array}
 \usepackage{titlesec}
-\usepackage{subcaption}
+\usepackage{appendix}
 \usepackage[footnote]{acronym}
 \usepackage[top=2cm, bottom=2cm, left=3cm, right=1cm, nofoot, nohead]{geometry}
 \usepackage{titlesec}
@@ -38,15 +40,17 @@
 \titlespacing*{\section}{\parindent}{*4}{*1}
 \titlespacing*{\subsection}{\parindent}{*4}{*1}
 
-\newcommand{\empline}{\mbox{}\newline}
 \newcommand{\likechapterheading}[1]{ 
 	\begin{center}
 		\textbf{\MakeUppercase{#1}}
-	\end{center}}
+	\end{center}
+}
+
 \makeatletter
-\renewcommand{\@dotsep}{2}
-\newcommand{\l@likechapter}[2]{{\@dottedtocline{0}{0pt}{0pt}{\bfseries #1}{\bfseries #2}}}
+	\renewcommand{\@dotsep}{2}
+	\newcommand{\l@likechapter}[2]{{\@dottedtocline{0}{0pt}{0pt}{\bfseries #1}{\bfseries #2}}}
 \makeatother
+
 \newcommand{\likechapter}[1]{    
 	\likechapterheading{#1}    
 	\addcontentsline{toc}{likechapter}{\MakeUppercase{#1}}}
@@ -72,6 +76,22 @@
 \patchcmd{\thebibliography}{\chapter*}{}{}{}
 \patchcmd{\thebibliography}{\chapter*{\refname}}{}{}{}
 
+
+\newcommand{\likechapterheeading}[1]{ 
+	\begin{flushright}
+		\textbf{\MakeUppercase{#1}}
+	\end{flushright}
+}
+
+\makeatletter
+\renewcommand{\@dotsep}{2}
+\newcommand{\l@likeechapter}[2]{{\@dottedtocline{0}{0pt}{0pt}{\bfseries #1}{\bfseries #2}}}
+\makeatother
+
+\newcommand{\likeechapter}[1]{    
+	\likechapterheeading{#1}    
+	\addcontentsline{toc}{likechapter}{\MakeUppercase{#1}}}
+
 \begin{document}
 	\input{main.tex}
 	\chapter{Теория}
@@ -86,5 +106,8 @@
 	\newpage
 	\likechapter{Список использованных источников}
 	\bibliography{bibliography}
-	\input{app.tex}
+	\newpage
+	\input{appA.tex}
+	\newpage
+	\input{appB.tex}
 \end{document}

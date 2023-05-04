@@ -1,8 +1,3 @@
-
-[Name]
-TestLine4
-
-[Data]
 Velocity u.Gradient X [ s^-1 ], Velocity u.Gradient Y [ s^-1 ], Velocity u.Gradient Z [ s^-1 ], Velocity v [ m s^-1 ], Velocity v.Gradient X [ s^-1 ], Velocity v.Gradient Y [ s^-1 ], Velocity v.Gradient Z [ s^-1 ], Wall Shear [ Pa ], Wall Shear X [ Pa ], Wall Shear Y [ Pa ], Wall Shear Z [ Pa ], X [ m ], Y [ m ], Z [ m ]
 -2.71557188e+00, -1.10199051e+02, -1.22341938e+01, 0.00000000e+00, -2.75672853e-01, -1.43248662e-02, -1.19683051e+00, 3.17094594e-01, 3.16864073e-01, 0.00000000e+00, 1.20890401e-02, 1.29999995e+00, 2.50000004e-02, 0.00000000e+00
 -2.48818588e+00, -9.29032288e+01, -1.44718533e+01, 7.22361729e-04, -2.65514791e-01, 1.34769595e+00, -2.16983414e+00, 3.17482561e-01, 3.17252308e-01, 0.00000000e+00, 1.20893558e-02, 1.29999995e+00, 2.44949497e-02, 0.00000000e+00
