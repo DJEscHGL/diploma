@@ -1,2 +1,26 @@
 nodes: 51397337
 elements: 12665608
+
+WATER:
+density 998.2 kg/m^3
+viscosity 0.001003 kg/m-s
+
+LES:
+cwale 0.325 || WALE
+
+INLET:
+velocity 0.029 m/s
+
+TIME:
+10000 time steps
+size 0.001 s
+iter/step 50
+
+METHOD:
+scheme SIMPLEC
+gradient Least Squares Cell Based
+pressure Second Order
+momentum Bounded Central Differencing
+transient formulation Bounded Second Order Implicit
+https://www.afs.enea.it/project/neptunius/docs/fluent/html/ug/node1148.htm
+https://www.afs.enea.it/project/neptunius/docs/fluent/html/th/node368.htm#recon-grad1
