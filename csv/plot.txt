@@ -1,0 +1,1 @@
+plot "Cf-XY-T06.csv" using 0:4 title 'c_f' w l lw 2 lc 

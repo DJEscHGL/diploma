@@ -1,3 +1,11 @@
 Ansys Fluent is a general-purpose computational fluid dynamics (CFD) software used to model fluid flow, heat and mass transfer, chemical reactions, and more. Fluent offers a modern, user-friendly interface that streamlines the CFD process from pre- to post-processing within a single window workflow. Fluent is known for its advanced physics modeling capabilities, which include turbulence modeling, single and multiphase flows, combustion, battery modeling, fluid-structure interaction, and much more.
 
 Also known for its efficient HPC scaling, large models can easily be solved in Fluent on multiple processors on either CPU or GPU. Multiple solver options are available, including pressure-based and density-based CPU solvers to cover low-speed to hypersonic flows and a pressure-based native GPU solver.
+
+\section{Локальное трение и перенос}
+% Про что писать найдено, нужна просто инфа, как можно больше и с формулами %
+Теоретическую основу описания процессов переноса в пограничном слое составляют фундаментальные законы сохранения и равновесия, одним из свойств которых является их инвариантность к масштабу и к взаимодействию с другими явлениями, т.е. структура математического описания пограничного слоя слабо зависит от контактного устройства.
+Для изучения влияния вихрегенераторов в турбулентном пограничном слое на локальное трение и перенос оценивались следующие параметры: средняя скорость и её пульсация , напряжение трения на стенке $\tau_w$, коэффициент трения $C_F$ и динамическая скорость $u_\tau$. Для представления профилей компонент средней скорости и их пульсаций использовались безразмерные координаты $u^+$ и $y^+$:
+\begin{equation}
+u^+ = \frac{U}{u*\tau} \qquad y^+ = \frac{yu*\tau}{v}
+\end{equation}

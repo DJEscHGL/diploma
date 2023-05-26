@@ -1,0 +1,5 @@
+set xrange [0:1000]
+set grid
+set ylabel 'C_{f}'
+set xlabel "x, mm"
+plot "Cf-XY-T06.csv" using 0:4 title '0.6' w l lw 2 lc 1
