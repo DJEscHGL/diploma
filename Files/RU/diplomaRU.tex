@@ -19,6 +19,8 @@
 \usepackage{tocloft}
 \usepackage{lastpage}
 \usepackage{etoolbox}
+\usepackage[font=small]{caption}
+\usepackage[sorting=none]{biblatex}
 
 \titleformat{\chapter}[display]
 {\filcenter}
@@ -66,16 +68,10 @@
 
 \linespread{1.1}
 \setlength{\parindent}{1.25cm}
-\bibliographystyle{plain}
+\bibliography{../bib/bibliography}
 \renewcommand{\contentsname}{Оглавление}
 \counterwithin{figure}{chapter}
 \setlength{\footskip}{25pt}
-
-% для en версии заменить russian на english %
-\addto\captionsrussian{\renewcommand{\bibname}{}}
-\patchcmd{\thebibliography}{\chapter*}{}{}{}
-\patchcmd{\thebibliography}{\chapter*{\refname}}{}{}{}
-
 
 \newcommand{\likechapterheeading}[1]{ 
 	\begin{flushright}
@@ -113,13 +109,14 @@
 }
 \makeatother
 
-
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
 \begin{document}
 	\input{main.tex}
 	\chapter{Теория пограничного слоя и его моделирование}
 	\input{ch1.tex}
-	\chapter{Моделирование с использованием ANSYS FLUENT}
+	\chapter{Моделирование задачи}
 	\input{ch2.tex}
 	\chapter{Анализ полученных данных}
 	\input{ch3.tex}
@@ -128,7 +125,7 @@
 	\input{end.tex}
 	\newpage
 	\likechapter{Список использованных источников}
-	\bibliography{../bib/bibliography}
+	\printbibliography[heading=none]
 	\newpage
 	\input{appA.tex}
 	\newpage

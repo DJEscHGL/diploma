@@ -1,0 +1,4 @@
+set grid
+set ylabel 'C_{f}'
+set xlabel "z, mm"
+plot "Cf-YZ-T06-600.csv" using 4:5 title '0.6' w l lw 2 lc 1

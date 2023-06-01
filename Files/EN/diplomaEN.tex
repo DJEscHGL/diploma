@@ -15,14 +15,16 @@
 \usepackage{lastpage}
 \usepackage{float}
 \usepackage{etoolbox}
+\usepackage[font=small]{caption}
+\usepackage[sorting=none]{biblatex}
 \usepackage[titles]{tocloft}
 \usepackage[top=3.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headheight=17pt,includehead,includefoot,heightrounded]{geometry} 
 \usepackage{xeCJK}
 \setCJKmainfont{SimSun}
-\bibliographystyle{plain}
 \counterwithin{figure}{section}
 
 \newcommand{\anonsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\bibliography{../bib/bibliography}
 
 \begin{document}
 	\begin{titlepage}
@@ -64,8 +66,8 @@
 				\underline{\hspace{1cm}Dima Shevelev\hspace{3.85cm}}\\   
 				\underline{\hspace{1cm}1922241\hspace{5.15cm}}\\
 				\underline{\hspace{1cm}PhD. Ass. Prof. Andrei Chorny\hspace{0.5cm}}\\ 
-				\underline{\hspace{1cm}Prof. Zhuravkov Michael\hspace{1.75cm}}\\
-				\underline{\hspace{1cm}2023-04-20\hspace{4.55cm}}\\  
+				\underline{\hspace{1cm}Prof. Zhuravkov Michael\hspace{2cm}}\\
+				\underline{\hspace{1cm}2023-04-20\hspace{5.5cm}}\\  
 			\end{minipage}
 			\end{verse}
 			~~~
@@ -133,19 +135,19 @@
 	
 	\textbf{Keywords:} vortex generator, boundary layer, turbulence, large eddy simulation, local friction and transport, grid model, modeling, analysis.\\	
 	\newpage
-	\section{Theory of boundary layer and it's modeling}
+	\section{Theory of boundary layer and its modeling}
 	\input{chp1.tex}
 	\newpage
-	\section{Modeling using ANSYS FLUENT}
+	\section{Modeling of the task}
 	\input{chp2.tex}
 	\newpage
-	\section{Analysis of data}
+	\section{Data analysis}
 	\input{chp3.tex}
 	\newpage
 	\input{end.tex}
 	\addcontentsline{toc}{section}{Conclusion}
 	\newpage
-	\bibliography{../bib/bibliography}
+	\printbibliography
 	\addcontentsline{toc}{section}{References}
 	\newpage
 	\addcontentsline{toc}{section}{Acknowledgments}
