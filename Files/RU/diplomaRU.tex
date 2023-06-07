@@ -88,27 +88,6 @@
 	\likechapterheeading{#1}    
 	\addcontentsline{toc}{likechapter}{\MakeUppercase{#1}}}
 
-
-\pretocmd{\chapter}{\addtocounter{totfigures}{\value{figure}}}{}{}
-\pretocmd{\chapter}{\addtocounter{tottables}{\value{table}}}{}{}
-
-\newcounter{totreferences}
-\pretocmd{\bibitem}{\addtocounter{totreferences}{1}}{}{}
-
-\newcounter{totfigures}
-\newcounter{tottables}
-\makeatletter
-\AtEndDocument{%
-	\addtocounter{totfigures}{\value{figure}}%
-	\addtocounter{tottables}{\value{table}}%
-	\immediate\write\@mainaux{%
-		\string\gdef\string\totfig{\number\value{totfigures}}%
-		\string\gdef\string\tottab{\number\value{tottables}}%
-		\string\gdef\string\totref{\number\value{totreferences}}%    
-	}%
-}
-\makeatother
-
 \usepackage{etoolbox}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
