@@ -12,13 +12,13 @@
 	
 	Значение пограничного слоя очень велико, так как он определяет гидродинамическое сопротивление при движении среды относительно твердого тела, а также сопротивление переносу массы и тепла. Введение этого понятия существенно упростило уравнения моделирования течение жидкости путём разделения потока на две области.
 	
-	В общем случае неизотермическое движение вязкой сжимаемой жидкости описывается следующими уравнениями: уравнения Навье-Стокса, уравнение неразрывности, конвективной теплопроводности и состояния.
+	В общем случае неизотермическое движение вязкой несжимаемой жидкости описывается следующими уравнениями: уравнения Навье-Стокса, уравнение несжимаемости, конвективной теплопроводности и состояния.
 	\begin{align}
-		& u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} + w\frac{\partial u}{\partial z} = -\frac{1}{\rho}\frac{\partial p}{\partial x} + \nu(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}) \nonumber\\
-		& u\frac{\partial v}{\partial x} + v\frac{\partial v}{\partial y} + w\frac{\partial v}{\partial z} = -\frac{1}{\rho}\frac{\partial p}{\partial y} + \nu(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2})\nonumber\\
-		& u\frac{\partial w}{\partial x} + v\frac{\partial w}{\partial y} + w\frac{\partial w}{\partial z} = -\frac{1}{\rho}\frac{\partial p}{\partial z} + \nu(\frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2})\nonumber\\
+		& \frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} + w\frac{\partial u}{\partial z} = -\frac{1}{\rho}\frac{\partial p}{\partial x} + \nu(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}) \nonumber\\
+		& \frac{\partial v}{\partial t} + u\frac{\partial v}{\partial x} + v\frac{\partial v}{\partial y} + w\frac{\partial v}{\partial z} = -\frac{1}{\rho}\frac{\partial p}{\partial y} + \nu(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2})\nonumber\\
+		& \frac{\partial w}{\partial t} + u\frac{\partial w}{\partial x} + v\frac{\partial w}{\partial y} + w\frac{\partial w}{\partial z} = -\frac{1}{\rho}\frac{\partial p}{\partial z} + \nu(\frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2})\nonumber\\
 		& \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z} = 0 \nonumber\\
-		& \rho c (\frac{\partial T}{\partial\tau} + \vec{v}\nabla T) = div(\lambda grad(T)) + q_v + \mu\Phi - p div(\vec{v}) \nonumber\\
+		& \rho c (\frac{\partial T}{\partial\tau} + \vec{v}\nabla T) = div(\lambda \nabla T) + q_v + \mu\Phi - p div(\vec{v}) \nonumber\\
 		& f(p, \rho, T) = 0
 	\end{align}
 	Исходя из этого имеем 6 уравнений и 6 неизвестных($u, v, w, \rho, T, p$). Эта система чрезвычайно сложна и в общем виде с трудом поддается решению даже современными численными методами на мощных компьютерах. Поэтому часто рассматривают различные упрощения этой системы.
